@@ -17,12 +17,20 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <TextBlock x:Name="ConversationTextBlock" 
                        Margin="10" TextWrapping="Wrap"/>
+ 
             <ScrollViewer.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                    <GradientStop Color="AliceBlue" Offset="0.0"/>
+                    <GradientStop Color="Violet" Offset="0.0"/>
                     <GradientStop Color="BlueViolet" Offset="1"/>
                 </LinearGradientBrush>
             </ScrollViewer.Background>
+
+            <ScrollViewer.Clip>
+                <RectangleGeometry RadiusX="10"
+                                   RadiusY="10"
+                                   Rect="0,0,400,200"/>
+            </ScrollViewer.Clip>
+            
         </ScrollViewer>
         
         <TextBox x:Name="UserInputTextBox" 
@@ -39,13 +47,13 @@
                     Content="Send" 
                     Width="100" 
                     Margin="5" 
-                    Click="SendMessageButton_Click"/>
+                    />
             
             <Button x:Name="ClearButton" 
                     Content="Clear" 
                     Width="100" 
                     Margin="5" 
-                    Click="ClearButton_Click"/>
+                    />
             
         </StackPanel>
     </Grid>
