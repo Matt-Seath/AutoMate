@@ -56,7 +56,17 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
             </StackPanel>
-            
+
+            <TextBox Width="250"
+                     Height="40"
+                     VerticalContentAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Margin="5"
+                     Grid.Column="1"
+                     Style="{StaticResource ChatTextbox}"/>
+
+
+
         </Grid>
 
 
