@@ -32,25 +32,25 @@
                    FontSize="22"/>
 
             <StackPanel Grid.Row="1">
-                <RadioButton Content="Home"
+                <RadioButton Content="ChatBot"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
                
-                <RadioButton Content="Home"
+                <RadioButton Content="Transcripts"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
 
-                <RadioButton Content="Home"
+                <RadioButton Content="Analytics"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
 
-                <RadioButton Content="Home"
+                <RadioButton Content="Settings"
                              Height="50"
                              Foreground="White"
                              FontSize="14"

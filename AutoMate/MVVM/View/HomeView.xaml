@@ -6,7 +6,48 @@
              xmlns:local="clr-namespace:AutoMate.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="ConversationTextBlock" 
+                       Margin="10" TextWrapping="Wrap"/>
+            <ScrollViewer.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                    <GradientStop Color="AliceBlue" Offset="0.0"/>
+                    <GradientStop Color="BlueViolet" Offset="1"/>
+                </LinearGradientBrush>
+            </ScrollViewer.Background>
+        </ScrollViewer>
+        
+        <TextBox x:Name="UserInputTextBox" 
+                 Grid.Row="1" 
+                 Margin="10" 
+                 Style="{StaticResource ChatTextbox}"/>
+        
+        <StackPanel Grid.Row="2" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Right" 
+                    Margin="10">
             
+            <Button x:Name="SendMessageButton" 
+                    Content="Send" 
+                    Width="100" 
+                    Margin="5" 
+                    Click="SendMessageButton_Click"/>
+            
+            <Button x:Name="ClearButton" 
+                    Content="Clear" 
+                    Width="100" 
+                    Margin="5" 
+                    Click="ClearButton_Click"/>
+            
+        </StackPanel>
     </Grid>
+    
 </UserControl>
