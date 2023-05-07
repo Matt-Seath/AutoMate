@@ -47,6 +47,11 @@
                 </Border.Background>
             </Border>
 
+            <Border Grid.RowSpan="2"
+                    CornerRadius="5,0,0,0"
+                    Background="#212127"
+                    MouseDown="Border_MouseDown"/>
+
             <TextBlock Grid.RowSpan="2" 
                        Text="AutoMate"
                        VerticalAlignment="Center"
