@@ -61,32 +61,44 @@
                        FontFamily="{StaticResource Poppins}"/>
 
             <StackPanel Grid.Row="2">
-                <RadioButton Content="ChatBot"
+                <RadioButton Name="ChatBot"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             IsChecked="True"
-                             Command="{Binding HomeViewCommand}"/>
+                             IsChecked="True"    
+                             Command="{Binding HomeViewCommand}">
+                    <Image Height="20" Width="20" 
+                           Source="/Images/chat.png"/>
+                </RadioButton>
 
-                <RadioButton Content="Transcripts"
+                <RadioButton Name="Transcripts"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}">
+                    <Image Height="20" Width="20" 
+                           Source="/Images/file.png"/>
+                </RadioButton>
 
-                <RadioButton Content="Analytics"
+                <RadioButton Name="Analytics"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}">
+                    <Image Height="20" Width="20" 
+                           Source="/Images/report.png"/>
+                </RadioButton>
 
-                <RadioButton Content="Settings"
+                <RadioButton Name="Settings"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding SettingsViewCommand}"/>
+                             Command="{Binding SettingsViewCommand}">
+                    <Image Height="20" Width="20" 
+                           Source="/Images/setting.png"/>
+                </RadioButton>
             </StackPanel>
 
             <ContentControl Grid.Row="1"
