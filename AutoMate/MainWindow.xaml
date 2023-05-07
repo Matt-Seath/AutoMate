@@ -15,6 +15,10 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
+    <Window.Resources>
+        <FontFamily x:Key="Poppins">/AutoMate;component/Fonts/#Poppins</FontFamily>
+    </Window.Resources>
+
     <Border Background="#212127"
             CornerRadius="5">
         
@@ -34,7 +38,8 @@
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    Foreground="White"
-                   FontSize="22"/>
+                   FontSize="22"
+                   FontFamily="{StaticResource Poppins}"/>
 
             <StackPanel Grid.Row="1">
                 <RadioButton Content="ChatBot"
