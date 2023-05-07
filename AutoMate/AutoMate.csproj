@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Icons\" />
+    <Folder Include="Images\" />
     <Folder Include="MVVM\Model\" />
   </ItemGroup>
 

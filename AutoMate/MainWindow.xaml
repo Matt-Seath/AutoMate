@@ -36,6 +36,10 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
+            <Border Grid.Column="1"
+                    CornerRadius="0,5,0,0"
+                    Background="#151518"/>
+
             <TextBlock Grid.RowSpan="2" 
                        Text="AutoMate"
                        VerticalAlignment="Center"
@@ -82,14 +86,36 @@
             <Border Grid.ColumnSpan="2">
                 
                 <Grid HorizontalAlignment="Stretch">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="200"/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
 
-                    <Border Grid.Column="1"
-                            CornerRadius="0,5,0,0"
-                            Background="#151518"/>
+                    <StackPanel HorizontalAlignment="Right"
+                                Orientation="Horizontal">
+
+                        <Button Width="20" Height="20"
+                                BorderThickness="0"
+                                Background="Transparent"
+                                Foreground="White"
+                                FontWeight="Bold"
+                                Margin="0,0,10,0"
+                                Padding="0,0,0,4"
+                                Content="_"/>
+                        
+                        <Button Width="20" Height="20"
+                                BorderThickness="0"
+                                Background="Transparent"
+                                Foreground="White"
+                                FontWeight="Bold" 
+                                Margin="0,0,10,0"
+                                Content="▢"/>
+
+                        <Button Width="20" Height="20"
+                                BorderThickness="0"
+                                Background="Transparent"
+                                Foreground="White"                          
+                                Margin="0,0,10,0" 
+                                FontWeight="Bold"
+                                Content="✕"/>
+
+                    </StackPanel>
 
                 </Grid>
                 
