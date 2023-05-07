@@ -9,6 +9,7 @@
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip"
         Height="600" Width="920">
 
     <Window.DataContext>
@@ -23,28 +24,28 @@
             CornerRadius="5">
         
         <Grid>
-
+            
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="70"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                
-                <TextBlock Text="AutoMate"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Foreground="White"
-                   FontSize="22"
-                   FontFamily="{StaticResource Poppins}"/>
+            <TextBlock Grid.RowSpan="2" 
+                       Text="AutoMate"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="White"
+                       FontSize="22"
+                       FontFamily="{StaticResource Poppins}"/>
 
-                <StackPanel Grid.Row="1">
-                    <RadioButton Content="ChatBot"
+            <StackPanel Grid.Row="2">
+                <RadioButton Content="ChatBot"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
@@ -52,43 +53,50 @@
                              IsChecked="True"
                              Command="{Binding HomeViewCommand}"/>
 
-                    <RadioButton Content="Transcripts"
+                <RadioButton Content="Transcripts"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
 
-                    <RadioButton Content="Analytics"
+                <RadioButton Content="Analytics"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
 
-                    <RadioButton Content="Settings"
+                <RadioButton Content="Settings"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding SettingsViewCommand}"/>
-                </StackPanel>
+            </StackPanel>
 
-            </Grid>
-
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="25"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-
-                <ContentControl Grid.Row="1"
+            <ContentControl Grid.Row="1"
+                            Grid.RowSpan="2"
+                            Grid.Column="1"
                             Margin="10"
                             Content="{Binding CurrentView}"/>
-            </Grid>
+
+            <Border Grid.ColumnSpan="2">
+                
+                <Grid HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="1"
+                            CornerRadius="0,5,0,0"
+                            Background="#151518"/>
+
+                </Grid>
+                
+            </Border>
             
-
         </Grid>
-
-
+        
     </Border>
 
 </Window>
