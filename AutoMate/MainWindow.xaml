@@ -76,7 +76,8 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}">
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding TranscriptsViewCommand}">
                     <Image Height="20" Width="20" 
                            Source="/Images/file.png"/>
                 </RadioButton>
@@ -85,7 +86,8 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}">
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding AnalyticsViewCommand}">
                     <Image Height="20" Width="20" 
                            Source="/Images/report.png"/>
                 </RadioButton>
@@ -114,32 +116,16 @@
                     <StackPanel HorizontalAlignment="Right"
                                 Orientation="Horizontal">
 
-                        <Button Width="20" Height="20"
-                                BorderThickness="0"
-                                Background="Transparent"
-                                Foreground="White"
-                                FontWeight="Bold"
-                                Margin="0,0,10,0"
-                                Padding="0,0,0,4"
-                                Content="_"
+                        <Button Content="_"
+                                Style="{StaticResource WindowButtonStyle}"
                                 Click="ButtonMinimize_Click"/>
 
-                        <Button Width="20" Height="20"
-                                BorderThickness="0"
-                                Background="Transparent"
-                                Foreground="White"
-                                FontWeight="Bold" 
-                                Margin="0,0,10,0"
-                                Content="▢"
+                        <Button Content="▢"
+                                Style="{StaticResource WindowButtonStyle}"
                                 Click="WindowStateButton_Click"/>
 
-                        <Button Width="20" Height="20"
-                                BorderThickness="0"
-                                Background="Transparent"
-                                Foreground="White"                          
-                                Margin="0,0,10,0" 
-                                FontWeight="Bold"
-                                Content="✕"
+                        <Button Content="✕"
+                                Style="{StaticResource WindowButtonStyle}"
                                 Click="ExitButton_Click"/>
 
                     </StackPanel>

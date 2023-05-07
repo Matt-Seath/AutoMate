@@ -9,6 +9,7 @@
         <ResourceDictionary>
             
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/WindowButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/TextboxTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
@@ -19,6 +20,14 @@
 
             <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
                 <view:SettingsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:TranscriptsViewModel}">
+                <view:TranscriptsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:AnalyticsViewModel}">
+                <view:AnalyticsView/>
             </DataTemplate>
 
         </ResourceDictionary>

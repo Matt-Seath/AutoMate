@@ -11,9 +11,18 @@ namespace AutoMate.MVVM.ViewModel
     {
         public RelayCommand HomeViewCommand { get; set; }
 
+		public RelayCommand AnalyticsViewCommand { get; set; }
+
+		public RelayCommand TranscriptsViewCommand { get; set; }
+
         public RelayCommand SettingsViewCommand { get; set; }
 
         public HomeViewModel HomeVm { get; set; }
+
+		public AnalyticsViewModel AnalyticsVm { get; set; }
+
+		public TranscriptsViewModel TranscriptsVm { get; set; }
+
         public SettingsViewModel SettingsVm { get; set; }
 
         private object _currentView;
@@ -30,6 +39,8 @@ namespace AutoMate.MVVM.ViewModel
 		public MainViewModel()
 		{
 			HomeVm = new HomeViewModel();
+			AnalyticsVm = new AnalyticsViewModel();
+			TranscriptsVm = new TranscriptsViewModel();
 			SettingsVm = new SettingsViewModel();
 			CurrentView = HomeVm;
 
@@ -37,6 +48,16 @@ namespace AutoMate.MVVM.ViewModel
 			{
 				CurrentView = HomeVm;
 			});
+
+            AnalyticsViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = AnalyticsVm;
+            });
+
+            TranscriptsViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = TranscriptsVm;
+            });
 
             SettingsViewCommand = new RelayCommand(o =>
             {
