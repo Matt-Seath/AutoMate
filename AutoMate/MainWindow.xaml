@@ -22,9 +22,9 @@
 
     <Border Background="#212127"
             CornerRadius="5">
-        
+
         <Grid>
-            
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
@@ -38,7 +38,14 @@
 
             <Border Grid.Column="1"
                     CornerRadius="0,5,0,0"
-                    Background="#151518"/>
+                    MouseDown="Border_MouseDown">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#121219" Offset="0.0"/>
+                        <GradientStop Color="#101015" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
 
             <TextBlock Grid.RowSpan="2" 
                        Text="AutoMate"
@@ -84,7 +91,7 @@
                             Content="{Binding CurrentView}"/>
 
             <Border Grid.ColumnSpan="2">
-                
+
                 <Grid HorizontalAlignment="Stretch">
 
                     <StackPanel HorizontalAlignment="Right"
@@ -97,15 +104,17 @@
                                 FontWeight="Bold"
                                 Margin="0,0,10,0"
                                 Padding="0,0,0,4"
-                                Content="_"/>
-                        
+                                Content="_"
+                                Click="ButtonMinimize_Click"/>
+
                         <Button Width="20" Height="20"
                                 BorderThickness="0"
                                 Background="Transparent"
                                 Foreground="White"
                                 FontWeight="Bold" 
                                 Margin="0,0,10,0"
-                                Content="▢"/>
+                                Content="▢"
+                                Click="WindowStateButton_Click"/>
 
                         <Button Width="20" Height="20"
                                 BorderThickness="0"
@@ -113,16 +122,12 @@
                                 Foreground="White"                          
                                 Margin="0,0,10,0" 
                                 FontWeight="Bold"
-                                Content="✕"/>
+                                Content="✕"
+                                Click="ExitButton_Click"/>
 
                     </StackPanel>
-
                 </Grid>
-                
             </Border>
-            
         </Grid>
-        
     </Border>
-
 </Window>
