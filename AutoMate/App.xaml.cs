@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Rystem.OpenAi;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AutoMate
 {
@@ -13,5 +15,7 @@ namespace AutoMate
     /// </summary>
     public partial class App : Application
     {
+        public IServiceProvider ServiceProvider { get; private set; }
+
     }
 }
