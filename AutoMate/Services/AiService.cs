@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoMate.Core
+namespace AutoMate.Services
 {
-    class AiServices
+    class AiService
     {
     }
 }
