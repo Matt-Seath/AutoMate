@@ -26,8 +26,8 @@
     <Content Include="Images\chat.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
-    <PackageReference Include="Rystem.OpenAi" Version="3.0.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0-preview.3.23174.8" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0-preview.3.23174.8" />
     <Resource Include="Images\file.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
