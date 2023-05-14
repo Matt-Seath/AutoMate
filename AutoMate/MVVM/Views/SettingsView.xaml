@@ -3,11 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:AutoMate.MVVM.View"
+             
+             xmlns:local="clr-namespace:AutoMate.MVVM.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              Background="#212127">
+    <UserControl.DataContext>
+        <local:SettingsViewModel/>
+    </UserControl.DataContext>
+    
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="40"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="1" 
+                   Grid.Column="1"
+                   Background="SlateBlue"
+                   Foreground="white"
+                   FontSize="40"
+                   HorizontalContentAlignment="center"
+                   VerticalContentAlignment="Center"
+                   Content="{Binding text}"/>
     </Grid>
 </UserControl>

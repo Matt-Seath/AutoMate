@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMate.Core;
 
 namespace AutoMate.MVVM.ViewModel
 {
-    class SettingsViewModel
+    class SettingsViewModel : ObservableObject
     {
+        public string text;
+
+        public SettingsViewModel()
+        {
+            text = "sdf";
+        }
+
     }
 }

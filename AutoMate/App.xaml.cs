@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Rystem.OpenAi;
 using System.Configuration;
 using System.Windows;
 
